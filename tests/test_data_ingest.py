@@ -10,9 +10,13 @@ import sqlite3
 import unittest
 from datetime import datetime, timezone
 
+import pytest
 import pandas as pd
 
 from alpha_graveyard.engine.data import fetch_ohlcv, save_to_db, get_last_timestamp, verify_data
+
+# Skip integration tests in CI (Binance API blocked from GitHub Actions)
+IN_CI = os.environ.get('CI') == 'true'
 
 
 class TestDataIngest(unittest.TestCase):
@@ -203,6 +207,7 @@ class TestDataIngestIntegration(unittest.TestCase):
                 except PermissionError:
                     pass  # Best effort cleanup
     
+    @unittest.skipIf(IN_CI, "Integration test - Binance API blocked in CI")
     def test_fetch_small_sample(self):
         """Fetch small sample of real data (1 day) to verify CCXT works."""
         # Fetch just 1 day of data
@@ -227,6 +232,7 @@ class TestDataIngestIntegration(unittest.TestCase):
         
         print(f"Fetched {len(df)} rows of real data")
     
+    @unittest.skipIf(IN_CI, "Integration test - Binance API blocked in CI")
     def test_fetch_and_save_integration(self):
         """Test full fetch and save cycle with resume."""
         # First fetch - small amount
