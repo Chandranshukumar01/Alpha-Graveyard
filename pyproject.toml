@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=68.0", "wheel"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "alpha-graveyard"
@@ -38,7 +38,7 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/YOUR_USERNAME/alpha-graveyard"
+Repository = "https://github.com/Chandranshukumar01/Alpha-Graveyard"
 
 [tool.setuptools.packages.find]
 include = ["alpha_graveyard*"]
