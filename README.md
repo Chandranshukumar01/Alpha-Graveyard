@@ -2,7 +2,8 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub](https://img.shields.io/badge/GitHub-AlphaGraveyard-black)](https://github.com/yourusername/alpha-graveyard)
+[![Tests](https://github.com/Chandranshukumar01/Alpha-Graveyard/actions/workflows/tests.yml/badge.svg)](https://github.com/Chandranshukumar01/Alpha-Graveyard/actions)
+[![GitHub](https://img.shields.io/badge/GitHub-AlphaGraveyard-black)](https://github.com/Chandranshukumar01/Alpha-Graveyard)
 
 > **"The goal of science is not to confirm biases, but to rigorously attempt to disprove them."**
 
@@ -88,6 +89,20 @@ python experiments/sim_inverse.py
 This project follows the **Scientific Falsification** method. Instead of seeking "winning" strategies, the system was built as a laboratory to systematically destroy them. Each failure is a data point proving where the alpha *isn't*.
 
 For a detailed analysis of why retail alpha is a myth, see the [Final Report](docs/RESULTS.md).
+
+---
+
+## 📚 References
+
+1. **Fama, E. F. (1970).** "Efficient Capital Markets: A Review of Theory and Empirical Work." *Journal of Finance*, 25(2), 383-417. [DOI](https://doi.org/10.2307/2325486)
+
+2. **Popper, K. R. (1959).** *The Logic of Scientific Discovery*. Routledge. (Falsification philosophy)
+
+3. **Bailey, D. H., & López de Prado, M. (2014).** "The Deflated Sharpe Ratio: Correcting for Selection Bias, Backtest Overfitting, and Non-Normality." *Journal of Portfolio Management*, 40(5), 94-107.
+
+4. **López de Prado, M. (2018).** *Advances in Financial Machine Learning*. Wiley. (Backtesting methodology)
+
+5. **Arnott, R. D., et al. (2016).** "The Surprising Alpha from Malkiel's Monkey and Upside-Down Strategies." *Journal of Portfolio Management*, 42(2), 91-105. (Inverse strategies)
 
 ---
 
