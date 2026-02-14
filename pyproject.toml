@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "alpha-graveyard"
+version = "1.0.0"
+description = "A 25-strategy empirical falsification of retail crypto trading alpha"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Your Name"}
+]
+keywords = ["quantitative-finance", "backtesting", "cryptocurrency", "EMH", "falsification"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "yfinance>=0.2.31",
+    "ccxt>=4.0",
+    "TA-Lib>=0.4.28",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+]
+
+[project.urls]
+Repository = "https://github.com/YOUR_USERNAME/alpha-graveyard"
+
+[tool.setuptools.packages.find]
+include = ["alpha_graveyard*"]

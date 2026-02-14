@@ -1,0 +1,31 @@
+# Data & artifacts
+*.db
+*.sqlite3
+_archive/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Logs & output
+*.txt
+*.log
+*.json
+!requirements.txt
+
+# IDE & tools
+.pytest_cache/
+.qoder/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store

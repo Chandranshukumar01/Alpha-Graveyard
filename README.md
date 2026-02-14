@@ -1,0 +1,94 @@
+# Alpha Graveyard: A 25-Strategy Empirical Falsification Study
+
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub](https://img.shields.io/badge/GitHub-AlphaGraveyard-black)](https://github.com/yourusername/alpha-graveyard)
+
+> **"The goal of science is not to confirm biases, but to rigorously attempt to disprove them."**
+
+`Alpha Graveyard` is a quantitative research platform built to rigorously test and falsify the effectiveness of retail trading strategies in the cryptocurrency markets. Through 5 years of historical data and 25 distinct strategy implementations, this study empirically validates the **Efficient Market Hypothesis (EMH)** at the retail level.
+
+## 🏁 The Conclusion: QED
+
+After testing 25 strategies across 8 distinct paradigms—including technical indicators, market microstructure, machine learning, and multi-agent LLMs—**zero robust alpha was found.**
+
+### Clean OOS Verification (2023-2024)
+
+| Asset | Strategy | Buy & Hold | Alpha | Verdict |
+|-------|----------|-----------|-------|---------|
+| **BTC** | S-20 Daily | +126% | **-93%** | ❌ FAIL |
+| **ETH** | S-20 Daily | +126% | **-94%** | ❌ FAIL |
+| **SOL** | S-20 Daily | +948% | **-950%** | ❌ CATASTROPHIC |
+
+**Key Finding**: Strategies that appeared to work in 2020-2022 (bull run) failed catastrophically in 2023-2024 after costs. Selection bias and period-specific artifacts created false positives.
+
+The "kill shot" was the **Inverse Test (S-25)**: when both a strategy (SMA20 Momentum) and its exact mathematical inverse lose money on the same data, it proves the signal contains **zero directional information**. Fees and slippage consume all potential edge, regardless of signal polarity.
+
+---
+
+## 🏗️ Architecture
+
+The platform is built as a professional-grade quantitative simulation environment:
+
+- **`alpha_graveyard.engine`**: Event-driven backtesting engine (not vectorized) to prevent lookahead bias.
+- **`alpha_graveyard.features`**: High-performance feature engineering and market regime classification.
+- **`alpha_graveyard.strategies`**: Modular strategy library implementing the "Graveyard" of failed ideas.
+- **`alpha_graveyard.engine.risk`**: Risk management kernel implementing Kelly Criterion and volatility targeting.
+
+```mermaid
+graph TD
+    Data[Data Ingestion CCXT/Yahoo] --> Features[Feature Engineering]
+    Features --> Regime[Regime Classifier]
+    Regime --> Engine[Backtest Engine]
+    Engine --> Strategy[Strategy Library]
+    Strategy --> Risk[Risk Manager]
+    Risk --> Results[Performance Metrics]
+```
+
+---
+
+## 🪦 The Graveyard (Results)
+
+The project stress-tested 25 strategies. All failed to overcome the "Friction Gap" (Fees + Spread) when subjected to walk-forward validation.
+
+| ID | Paradigm | Concept | Verdict |
+| :--- | :--- | :--- | :--- |
+| **S-01** | Technical | MACD/RSI Momentum | **Lagged:** Signals trigger after the move. |
+| **S-08** | Ensemble | Weighted Majority Vote | **Diluted:** Errors compound faster than signal. |
+| **S-12** | AI/LLM | Multi-Agent "Lighthouse" | **Overfit:** LLMs hallucinate patterns in noise. |
+| **S-16** | Mathematical | Grid/Martingale | **Ruin:** Profitable until the "Black Swan" event. |
+| **S-18** | Structural | CME Gap Fill | **Efficient:** Arbitraged away by HFTs. |
+| **S-20** | Meta | Daily SMA20 + Vol | **Lucky:** Period-specific artifact; breaks on 5y. |
+| **S-24** | Statistical | Regression Residual | **Noise:** Cointegration breaks in crypto regimes. |
+| **S-25** | **Inverse** | **SMA20 Fade** | **QED:** Both sides lose. Zero information. |
+
+---
+
+## 🚀 Getting Started
+
+### Installation
+
+1. Install TA-Lib (system dependency).
+2. Clone and install the package:
+
+```bash
+pip install -e .
+```
+
+### Running an Experiment
+
+Run any of the 25 falsification scripts in the `experiments/` directory:
+
+```bash
+python experiments/sim_inverse.py
+```
+
+## 📜 Research Philosophy
+
+This project follows the **Scientific Falsification** method. Instead of seeking "winning" strategies, the system was built as a laboratory to systematically destroy them. Each failure is a data point proving where the alpha *isn't*.
+
+For a detailed analysis of why retail alpha is a myth, see the [Final Report](docs/RESULTS.md).
+
+---
+
+
