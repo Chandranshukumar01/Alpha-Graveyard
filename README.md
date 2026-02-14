@@ -94,15 +94,49 @@ For a detailed analysis of why retail alpha is a myth, see the [Final Report](do
 
 ## 📚 References
 
-1. **Fama, E. F. (1970).** "Efficient Capital Markets: A Review of Theory and Empirical Work." *Journal of Finance*, 25(2), 383-417. [DOI](https://doi.org/10.2307/2325486)
+*The following citations represent the foundational research upon which this empirical falsification study is built. They are divided into three categories: theoretical foundations, technical methodologies, and applied research.*
 
-2. **Popper, K. R. (1959).** *The Logic of Scientific Discovery*. Routledge. (Falsification philosophy)
+### **Foundational Theory**
+
+1. **Fama, E. F. (1970).** "Efficient Capital Markets: A Review of Theory and Empirical Work." *Journal of Finance*, 25(2), 383-417. [DOI](https://doi.org/10.2307/2325486)
+   - *The Efficient Market Hypothesis (EMH) foundation. This study empirically validates EMH at the retail level.*
+
+2. **Popper, K. R. (1959).** *The Logic of Scientific Discovery*. Routledge.
+   - *Falsification philosophy. The scientific method applied: seeking disproof, not confirmation.*
 
 3. **Bailey, D. H., & López de Prado, M. (2014).** "The Deflated Sharpe Ratio: Correcting for Selection Bias, Backtest Overfitting, and Non-Normality." *Journal of Portfolio Management*, 40(5), 94-107.
+   - *Statistical rigor in backtesting. Demonstrates why most "alpha" is selection bias.*
 
-4. **López de Prado, M. (2018).** *Advances in Financial Machine Learning*. Wiley. (Backtesting methodology)
+4. **López de Prado, M. (2018).** *Advances in Financial Machine Learning*. Wiley.
+   - *Backtesting methodology. Event-driven architecture, cross-validation, and the "triple barrier" method.*
 
-5. **Arnott, R. D., et al. (2016).** "The Surprising Alpha from Malkiel's Monkey and Upside-Down Strategies." *Journal of Portfolio Management*, 42(2), 91-105. (Inverse strategies)
+5. **Arnott, R. D., et al. (2016).** "The Surprising Alpha from Malkiel's Monkey and Upside-Down Strategies." *Journal of Portfolio Management*, 42(2), 91-105.
+   - *Inverse strategies. Proof that random strategies can outperform—motivating our S-25 Inverse Test.*
+
+### **Technical Indicators & Methodologies**
+
+6. **Bollinger, J. (2002).** *Bollinger on Bollinger Bands*. McGraw-Hill.
+   - *Bollinger Bands (S-07, S-11). Mean reversion on volatility envelopes.*
+
+7. **Wilder, J. W. (1978).** *New Concepts in Technical Trading Systems*. Trend Research.
+   - *ADX, DMI, ATR, RSI (S-01 to S-05). Trend strength and volatility measurement.*
+
+8. **Hurst, H. E. (1951).** "Long-Term Storage Capacity of Reservoirs." *Transactions of the American Society of Civil Engineers*, 116, 770-808.
+   - *Hurst Exponent (S-23). Fractal analysis for persistence detection in time series.*
+
+9. **Kelly, J. L. (1956).** "A New Interpretation of Information Rate." *Bell System Technical Journal*, 35(4), 917-926.
+   - *Kelly Criterion. Position sizing framework used in risk management.*
+
+10. **Thorp, E. O. (1966).** "Beat the Dealer: A Winning Strategy for the Game of Twenty-One." *Blaisdell Publishing*.
+    - *Applied Kelly Criterion. Position sizing in adverse scenarios.*
+
+### **Applied Research & Meta-Analysis**
+
+11. **Malkiel, B. G. (1973).** *A Random Walk Down Wall Street*. W. W. Norton & Company.
+    - *Random walk hypothesis. The null hypothesis against which all strategies are tested.*
+
+12. **Sharpe, W. F. (1994).** "The Sharpe Ratio." *Journal of Portfolio Management*, 21(1), 49-58.
+    - *Risk-adjusted returns. Standard for performance measurement (though we report raw alpha).*
 
 ---
 
