@@ -81,7 +81,37 @@ pip install -e .
 Run any of the 25 falsification scripts in the `experiments/` directory:
 
 ```bash
+# Example 1: Run the Inverse Strategy (S-25) - proves zero information content
 python experiments/sim_inverse.py
+
+# Example 2: Run Mean Reversion on Bollinger Bands (S-07)
+python experiments/sim_07.py
+
+# Example 3: Run full backtest with risk management
+python experiments/sim_16_grid_trading.py
+```
+
+### Complete Workflow Example
+
+```python
+from alpha_graveyard.engine.data import fetch_ohlcv, save_to_db
+from alpha_graveyard.features.engine import FeatureEngine
+from alpha_graveyard.strategies.library import run_strategy_test
+from alpha_graveyard.engine.risk import RiskManager
+
+# 1. Fetch historical data
+df = fetch_ohlcv('BTC/USDT', '1h', since='2023-01-01')
+save_to_db(df, 'btc_pipeline.db')
+
+# 2. Calculate features
+engine = FeatureEngine()
+features_df = engine.calculate_features(df)
+
+# 3. Run strategy with risk management
+risk_mgr = RiskManager(initial_capital=100000)
+signals = run_strategy_test(features_df, your_strategy)
+
+# 4. Results: Expect negative alpha (validates EMH)
 ```
 
 ## 📜 Research Philosophy
